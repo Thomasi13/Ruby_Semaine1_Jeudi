@@ -33,8 +33,14 @@ puts  "La crypto la plus petite est " + crypto_hash[min_crypto] + " d'une valeur
 #Création d'un tableau "crypto_name_coin" qui récupère tout les noms contenue dans le hash qui a le nom 
 # "coin" ou "COIN" ou "Coin". Puis affiche le nombre de valeurs contenues dans le tableau "crypto_name_coin"
 
-crypto_name_coin = crypto_hash.select { |x| x =~ /coin/ || x =~ /COIN/ || x =~ /Coin/}
+crypto_name_coin = crypto_name.select{|k| k =~ /coin/ || k =~ /COIN/ || k =~ /Coin/}
 	puts "Il y a #{crypto_name_coin.length} criptomonnaies qui contiennent le mot coin"
+
+
+
+
+
+
 
 #création d'un tableau "name_min_6000" vide
 name_min_6000 =[]
@@ -52,6 +58,6 @@ end
 
 # création d'une variable max_name_min_6000 qui est égal à la valeur maximum du tableau max_name_min_6000
 max_name_min_6000 = name_min_6000.max
-	puts " la cryptomonnaie la plus grande parmi celles inférieures à 6000 est :" + crypto_hash[max_name_min_6000] + " d'une valeur de: $ #{max_name_min_6000}"
+	puts " la cryptomonnaie la plus grande parmi celles inférieures à 6000 est :" + crypto_hash[max_name_min_6000] + " d'une valeur de: $#{max_name_min_6000}"
 
 #affiche la valeur  nom de la criptomonnaie correspondant 
